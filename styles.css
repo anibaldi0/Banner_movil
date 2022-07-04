@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Orbitron:wght@600&display=swap');
+
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0; /* para que no quede borde blanco alrededor */
+}
+
+body{
+    font-family: Manrope, sans-serif;
+    line-height: 1.6;
+}
