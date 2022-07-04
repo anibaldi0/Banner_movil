@@ -1,12 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Orbitron:wght@600&display=swap');
 
 html, body{
-    height: 100%;
-    width: 100%;
-    margin: 0; /* para que no quede borde blanco alrededor */
+  height: 100%;
+  width: 100%;
+  margin: 0; /* para que no quede borde blanco alrededor */
 }
 
 body{
-    font-family: Manrope, sans-serif;
-    line-height: 1.6;
+  font-family: Manrope, sans-serif;
+  line-height: 1.6;
+}
+
+.s-center{
+  text-align: center; /* para tamanos pequenos de pantalla el texto queda centrado */
+}
+
+@media screen and (min-width: 1024px) { /*para tamanos de pantalla grandes el texto se va a la izquierda */
+  .s-center{
+    text-align: left;
+  }
+}
+
+.flex{
+  display: flex; /*para que el countdown lo ponga en una sola linea */
 }

@@ -1,5 +1,109 @@
 .main-banner{
   background: radial-gradient(79.43% 251.58% at 23.18% 73.07%, #0142a0 0, #0f133a 44.41%, #101034 69.58%, #301436 100%, #411958 0);
   color: #fff;
-  ;
+  padding: 2rem 1rem 0;
+}
+
+/* titulo y descripcion */
+.title{
+  font-family: orbitron, sans-serif;
+  font-size: 1.5rem;
+}
+
+.line-2{
+  color: #16f4d0; /* cambio de color para la segunda linea del titulo */
+}
+
+.description{
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .title{
+    font-size: 2.5rem; /*al cambiar a pantalla grande el titulo del banner se hace mas grande */
+  }
+  .description{
+    font-size: 1rem;
+  }
+}
+
+/*fin titulo y descripcion */
+
+/* inicio countdown */
+.countdown{
+  justify-content: center; /*para centrar el contenedor del countdown */
+  align-items: center; /*como es un flexbox queda todo alineado */
+  font-size: 0.8rem;
+  margin-bottom: 1rem; /* para que el countdown se separe del formulario de abajo */
+}
+
+@media screen and (min-width: 1024px) { /* esta media query es para que el countdown se acomode hacia la izquierda cuando la pantalla es grande */
+  .countdown{
+    justify-content: flex-start;
+  }
+}
+
+.countdown-item{
+  padding: 0 0.5rem; /* para separar entre si los numeros del countdown */
+  align-items: center;
+  position: relative; 
+}
+
+.countdown-item:not(:last-of-type):before{ /* para crear un elemento o separador entre los numeros del countdown */
+  /* se usa un not:last-of-type para que se elimine el separador despues de los segundos */
+  position: absolute;
+  right: 0;
+  content: ""; /* para que se dibuje un elemento o raya */
+  display: block; /* para que pueda verse el elemento */
+  width: 1px;
+  height: 50%;
+  background: #fff;
+  opacity: 0.5;
+}
+
+.countdown-number{
+  font-size: 1.75em; /*se usa em para que el tamano del numero sea relativo al texto */
+  font-weight: bold;
+  margin-right: 0.25rem; /*para que el numero del countdown no se pegue a la letra */
+  color: #dfa6f9;
+}
+
+.countdown-letter{
+  opacity: 0.5; /* para que las letras del contador sean mas transparentes */
+}
+/* fin del countdown */
+
+/* Formulario */
+
+.form-container{
+  height: 2.5rem; /* altura del input y boton del formulario */
+}
+
+.form{ /* para centrar el texto que esta debajo del input */
+  display: inline-flex; /*para que el input y el boton del formulario se pongan uno al lado del otro */
+  /* inline-flex es un flex que se comporta como texto, y sirve para que se pueda centrar con el text-aligne */
+}
+
+.input{
+  line-height: 2.5rem;
+  width: 15rem;
+  background: none; /* para que no tenga color el input */
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 0 0.5rem;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.input::placeholder{
+  color: rgba(255,255,255,.5);
+}
+
+.button{
+  padding: 0 1rem;
+  border-radius: 0 0.25rem 0.25rem 0; /* para que solo redondee las esquinas de la derecha, para dar sensacion de continuidad entre el input y el boton */
+  border: none; /* para quitar el borde por default que tiene el boton */
+}
+
+.form-hint{
+  font-size: 0.7rem;
+  margin: 0 0 1rem; /* esta leyenda al ser un p y no un span hay que resetear el margin que trae por default de 1rem arriba y abajo */
 }
